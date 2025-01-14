@@ -405,13 +405,14 @@ span{
     }
     .about-outer-header{
         opacity: 0.2;
+        margin-left: -20px;
     }
     .about-inner-header{
         font-size: 1em;
         font-weight: 600;
         position: relative;
         bottom: 32px;
-        left: 40px;
+        left: 50px;
     }
     .about-sec{
         width: 100%;
