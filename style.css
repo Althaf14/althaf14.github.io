@@ -8,6 +8,15 @@ body{
     background-color: black;
     
 }
+
+#menu-icon{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+
 .nav{
     height: 60px;
     position: fixed;
@@ -15,6 +24,7 @@ body{
     text-align: right;
     margin-top: 30px;
     animation: slideLeft 1s ease-out forwards;
+    z-index: 999;
 }
 
 .nav-hidden{
@@ -42,12 +52,13 @@ body{
 
 .name{
     position:relative;
-    left: 40px;
+    left: 10px;
     top: 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color: rgb(235, 9, 9);
+    height: 10%;
 }
 
 #home{
@@ -72,7 +83,7 @@ body{
     bottom: 90px;
 }
 
-a{
+.nav a{
     margin-right: 50px;
     position: relative;
     right: 50px;
@@ -126,7 +137,7 @@ p{
 }
 
 #about{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
 }
@@ -157,6 +168,7 @@ p{
 
 .about-sec{
     width: 100%;
+    height: 100%;
 
 }
 
@@ -174,17 +186,9 @@ span{
     font-weight: 600;
 }
 
-.projects{
-    height: 100vh;
-    width: 100vw;
-}
-
-.project-cont{
-    height: 900px;
-}
-
 .about-div{
     width: 50%;
+    height: 100%;
 }
 .education{
     width: 50%;
@@ -261,6 +265,8 @@ span{
     
 }
 
+
+
 .timeline-content p{
     font-size: 1em;
     line-height: 25px;
@@ -269,28 +275,97 @@ span{
     
 }
 
+.projects{
+    height: 100vh;
+    width: 100vw;
+}
+
+.project-cont{
+    height: 900px;
+}
+
 
 
 @media screen and (max-width:768px){
     body{
         width: 100vw;
     }
+
+    #menu-icon{
+        display: block;
+        position: relative;
+        right: 20px;
+    }
     .image-div{
         display: none;
     } 
 
+    .fa-bars{
+        color: #fff;
+        font-size: 1.7em;
+    }
+    .menu-icon{
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 20px;
+        position: relative;
+        top: 10px;
+    }
+
+    .menu{
+        display: block;
+        height: 400px;
+        width: 80%;
+        margin: 10%;
+        border: solid #fff 2px;
+        position: relative;
+        top: 40px;
+        z-index: 999;
+        position: fixed;
+        background: transparent;
+        background-color: rgba(0, 0, 0, 0.719);
+        backdrop-filter: blur(2px);
+        display: none;
+
+    }
+
+    .fa-square-xmark{
+        font-size: 2em;
+        position: relative;
+        top: 10px;
+        left: 90%;
+    }
+
+    .responsive-nav{
+        height: 100%;
+        width: 100%;
+        
+       
+    }
+
+    .responsive-nav a{
+        text-decoration: none;
+        width: 30%;
+        margin-left: 35%;
+        margin-top: 10%;
+        font-size: 2em;
+        /* border: solid #fff 3px; */
+        display: block;
+        
+    }
+
     .nav{
+        display: none;
         width: 100vw;
         animation: slideLeft 0.3s ease-out forwards;
     }
     .name{
         font-size: 1.5em;
+        margin-top: -50px;
+        width: 170px;
     }
-    a{
-        margin-right: 5px;
-        position: relative;
-        left: 1px;
-        font-size: 0.9em;
+    .responsive-nav.a{
+        text-decoration: none;
     }
     .name-div{
         margin-left: 0px;
@@ -312,6 +387,10 @@ span{
         top: 180px;
         margin-left:40px;
 
+    }
+
+    #about{
+        display: block;
     }
     .about-header{
         font-size: 1.2em;
@@ -343,6 +422,69 @@ span{
         font-size: 0.8em;
         font-family:Arial, Helvetica, sans-serif ;
     }
+    .about-div{
+        width: 100%;
+    }
+    .education{
+        width: 50%;
+    }
+    
+    .education h1{
+        margin-top: 9rem;
+        margin-left: 5rem;
+    }
+
+    
+    .timeline-items::before{
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        
+    }
+    
+    .timeline-item{
+        top: 0px;
+        left: 30px;
+    }
+    
+    .timeline-item:last-child{
+        margin-bottom: 0;
+    }
+    
+    .timeline-dot{
+        top: 20px;
+        left: 7px;
+                    
+    }
+    
+    .timeline-date{
+        font-size: 1.5em;
+        font-weight: 800;
+        margin: 6px 0 15px;
+        position: relative;
+        top: 12px;
+        left: 25px;
+    }
+    
+    .timeline-content{
+        width: 100%;
+    }
+    
+    .timeline-content h2{
+        position: relative;
+        left: 25px;
+        width: 270px;
+        
+    }
+    
+    .timeline-content p{
+        width: 270px;
+        line-height: 20px;
+        position: relative;
+        left: 25px;
+        margin-right: 0;       
+    }
+
 
 
 }
