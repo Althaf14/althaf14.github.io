@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    /* border: solid red 2px; */
+    /* outline: solid red 2px; */
     scroll-behavior: smooth;
     color: #fff;
 }
@@ -35,10 +35,11 @@ body{
 
 .new-nav{
     height: 50px;
-    padding-top: 10px;
+    padding-top: 30px;
     margin-top: 0;
     background-color: #ffffff07;
     z-index: 999;
+    width: 100%;
 }
 
 @keyframes slideLeft {
@@ -59,6 +60,7 @@ body{
     font-weight: 600;
     color: rgb(235, 9, 9);
     height: 10%;
+    width: 90%;
 }
 
 #home{
@@ -212,7 +214,7 @@ span{
     width: 5px;
     height: 100%;
     margin-left: 45px;
-    background-color: red;
+    background-color:rgb(228, 12, 12);
     top: -20px;
     left: 0px;
     
@@ -234,8 +236,8 @@ span{
 .timeline-dot{
     height: 21px;
     width: 21px;
-    background-color: red;
-    box-shadow: 0 0 25px red , 0 0 50px red;
+    background-color: rgb(228, 12, 12);
+    box-shadow: 0 0 25px rgb(228, 12, 12) , 0 0 50px rgb(228, 12, 12);
     position: absolute;
     /* left: calc(50% - 8px); */
     border-radius: 50%;
@@ -275,14 +277,60 @@ span{
     
 }
 
-.projects{
+ #projects{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+  
+    
 }
 
-.project-cont{
-    height: 900px;
+.project-div{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
+#projects h1{
+    margin-top: 50px;
+     text-align: center;
+} 
+
+.project-cont{
+    border: solid #fff 1px;
+    height: 170px;
+    width: 170px;
+    margin-left: 30%;
+    margin-top: 20%;
+}
+
+.project-cont:hover{
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 5px 15px;
+}
+
+.project-cont a{
+  text-decoration: none;
+}
+
+#contacts{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.inputs{
+    height: 100%;
+    width: 50%;
+}
+
+.social{
+    height: 100%;
+    width: 50%;
+}
+
 
 
 
