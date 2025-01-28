@@ -589,7 +589,9 @@ span {
 
   #projects h1 {
     text-align: center;
-    text-decoration: underline;
+    text-decoration: underline 5px;
+    text-decoration-color: rgb(235, 9, 9);
+    
   }
 
   .project-cont {
@@ -601,7 +603,7 @@ span {
   }
 
   .project-cont:hover {
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 5px 15px;
+    box-shadow: rgba(235, 9, 9, 0.24) 10px 10px 25px;
   }
 
   .project-cont a {
