@@ -3,6 +3,7 @@ let lastScrollY = window.scrollY;
 let menu = document.getElementById("menu");
 let menuIcon = document.getElementById("menu-icon");
 let closeBtn = document.getElementById("closeBtn");
+let responsiveNav = document.getElementById("responsive-nav");
 
 window.addEventListener("scroll", () => {
   if (lastScrollY < window.scrollY) {
@@ -37,3 +38,5 @@ function menuCloseFn(){
   menu.style.display="none";
   menuIcon.style.display="block";
 }
+
+
