@@ -59,7 +59,7 @@ body {
   left: 10px;
   top: 30px;
   font-size: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bona Nova SC", serif;
   font-weight: 600;
   color: rgb(235, 9, 9);
   height: 10%;
@@ -115,13 +115,16 @@ p {
   font-size: 1.9em;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0.5;
-  margin-left: 20px;
+  margin-left: 50px;
   position: relative;
   top: 200px;
 }
 
 .last-name {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Bona Nova SC", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
   font-size: 4.8em;
   font-weight: 500;
   position: relative;
@@ -131,7 +134,7 @@ p {
 
 .web {
   font-family: monospace;
-  font-size: 1.3em;
+  font-size: 1.9em;
   opacity: 0.5;
   margin-left: 15px;
   position: relative;
@@ -406,7 +409,7 @@ span {
   .responsive-nav a {
     text-decoration: none;
     width: 30%;
-    margin-left: 35%;
+    margin-left: 33%;
     margin-top: 20%;
     font-size: 2em;
     /* border: solid #fff 3px; */
@@ -415,12 +418,6 @@ span {
   }
 
 
-
-  .responsive-navslide-in a {
-    transform: translateX(0);
-    /* Slide in to the original position */
-  }
-
   .nav {
     display: none;
     width: 100vw;
@@ -428,9 +425,12 @@ span {
   }
 
   .name {
-    font-size: 1.5em;
+    font-size: 2.2em;
     margin-top: -50px;
     width: 170px;
+    font-family: "Smooch Sans", serif;
+    font-weight: 500;
+    font-style: normal;
   }
 
   .responsive-nav.a {
@@ -442,10 +442,10 @@ span {
   }
 
   .first-name {
-    font-size: 1.5em;
-    margin-left: 70px;
+    font-size: 1.7em;
+    margin-left: 75px;
     position: relative;
-    top: 250px;
+    top: 260px;
   }
 
   .last-name {
@@ -457,7 +457,7 @@ span {
   }
 
   .web {
-    font-size: 1em;
+    font-size: 1.27em;
     position: relative;
     top: 230px;
     margin-left: 60px;
