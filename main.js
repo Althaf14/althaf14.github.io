@@ -36,7 +36,7 @@ function menuOpenFn(){
 
 function menuCloseFn(){
   menu.style.display="none";
-  menuIcon.style.display="none";
+  menuIcon.style.display="block";
   
 }
 
