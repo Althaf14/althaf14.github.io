@@ -56,14 +56,15 @@ body {
 
 .name {
   position: relative;
-  left: 10px;
+  left: 160px;
   top: 30px;
-  font-size: 1.8em;
+  font-size: 2.2em;
   font-family: "Smooch Sans", serif;
   font-weight: 600;
   color: rgb(235, 9, 9);
   height: 10%;
   width: 90%;
+  z-index: 99;
 }
 
 #home {
@@ -85,7 +86,8 @@ body {
   /* width: 600px; */
   height: 670px;
   position: relative;
-  bottom: 90px;
+  bottom: 145px;
+  left: 130px;
 }
 
 .nav a {
@@ -117,7 +119,8 @@ p {
   opacity: 0.5;
   margin-left: 50px;
   position: relative;
-  top: 200px;
+  top: 215px;
+  right: 15px;
 }
 
 .last-name {
@@ -139,6 +142,7 @@ p {
   margin-left: 15px;
   position: relative;
   top: 170px;
+  right: 15px;
 
 }
 
@@ -292,7 +296,7 @@ span {
 #projects {
   height: 100vh;
   width: 100%;
-
+  padding-top: 0.7%;
 
 }
 
@@ -309,6 +313,9 @@ span {
 #projects h1 {
   margin-top: 50px;
   text-align: center;
+  text-decoration: underline 5px;
+  text-decoration-color: rgb(235, 9, 9);
+  
 }
 
 .project-cont {
@@ -316,11 +323,19 @@ span {
   height: 170px;
   width: 170px;
   margin-left: 30%;
-  margin-top: 20%;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-cont:hover {
   box-shadow: rgba(255, 255, 255, 0.24) 0px 5px 15px;
+  height: 180px;
+  width: 180px;
+  margin-left: 29%;
+  margin-top: 7%;
+  transition: 150ms ease-in-out;
 }
 
 .project-cont a {
@@ -328,19 +343,145 @@ span {
 }
 
 #contacts {
-  height: 100%;
+  height: 60vh;
   width: 100%;
   display: flex;
 }
 
+
 .inputs {
   height: 100%;
   width: 50%;
+  margin-left: 10%;
+  margin-top: 3%;
 }
 
 .social {
   height: 100%;
   width: 50%;
+}
+.contact-input{
+  height: 40px;
+  width: 400px;
+  outline: 0;
+  background-color: rgba(235, 9, 9, 0.055);
+  border: 0;
+  border-radius: 6px;
+  margin: 5%;
+  padding-left: 16px;
+  font-size: 1.1em;
+}
+.contact-header{
+  font-size: 1.4em;
+  position: relative;
+  top: 20px;
+  left: 35px;
+}
+.inputs textarea{
+  height: 130px;
+}
+.inputs button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 425px;
+  outline: 0;
+  background-color: rgba(235, 9, 9, 0.247);
+  border: 0;
+  margin-left: 4.5%;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.inputs button:hover{
+  width: 445px;
+  margin-left: 2.5%;
+  background-color: rgba(235, 9, 9, 0.363);
+
+}
+.social{
+  margin-top: 20%;
+}
+.social-header {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 2.5em;
+  /* margin-top: 50px; */
+  position: absolute;
+  left: 690px;
+  top: 330%;
+
+}
+.social-outer-header {
+  opacity: 0.1;
+}
+
+.social-inner-header {
+  color: rgb(228, 12, 12);
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  width: 50%;
+  bottom: 67px;
+  left: 170px;
+
+}
+.socials-container{
+  display: flex;
+  gap: 20px;
+}
+.socials-container a{
+  background-color: white;
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.socials-container a svg{
+  height: 32px;
+}
+.socials-container a::before{
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white;
+}
+.socials-container a::after{
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
 }
 
 
