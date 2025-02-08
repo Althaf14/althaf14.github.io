@@ -4,6 +4,9 @@
   scroll-behavior: smooth;
   color: #fff;
 }
+a{
+  text-decoration: none;
+}
 
 body {
   background-color: black;
@@ -340,6 +343,11 @@ span {
 
 .project-cont a {
   text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #contacts {
