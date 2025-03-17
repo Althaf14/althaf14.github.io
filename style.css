@@ -776,12 +776,13 @@ span {
   height: 100%;
   width: 50%;
   margin-left: 3%;
-  margin-top: 0%;
+  margin-top: 5%;
 }
 
 .social {
   height: 100%;
   width: 50%;
+  margin-top: 100%;
 }
 .contact-input{
   display: block;
@@ -829,9 +830,9 @@ span {
   margin-top: -30%;
 }
 .social-header {
-  position: relative;
+  position:relative;
   left: 0%;
-  bottom: 450px;
+  bottom: 520px;
   font-size: 1.2em;
   margin-top: 0px;
   text-align: center;
@@ -858,7 +859,7 @@ span {
   height: 50px;
   width: 50px;
   margin-left: -130px;
-  margin-top: 110px;
+  margin-top: 120px;
   font-size: 0.4em;
   text-align: center;
   padding-top: 8px;
