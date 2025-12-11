@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Althaf | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Althaf, a passionate computer science student and aspiring full-stack developer.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#64748b',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    keyframes: {
+                        'gradient-move': {
+                            '0%, 100%': { backgroundPosition: '0% 0%' },
+                            '50%': { backgroundPosition: '100% 100%' },
+                        }
+                    },
+                    animation: {
+                        'gradient-move': 'gradient-move 15s ease infinite',
+                    },
+                    backgroundImage: {
+                        'mesh-light': "radial-gradient(at 0% 0%, hsla(160, 84%, 40%, 0.15) 0px, transparent 50%), radial-gradient(at 50% 0%, hsla(170, 70%, 60%, 0.15) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(150, 80%, 50%, 0.15) 0px, transparent 50%)",
+                        'mesh-dark': "radial-gradient(at 0% 0%, hsla(160, 60%, 20%, 0.2) 0px, transparent 50%), radial-gradient(at 50% 0%, hsla(170, 50%, 30%, 0.2) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(150, 60%, 25%, 0.2) 0px, transparent 50%)"
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 bg-mesh-light dark:bg-mesh-dark bg-[length:150%_150%] bg-fixed animate-gradient-move">
+
+    <!-- Header / Navigation -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-transform duration-300 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#"
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-400">
+                        Althaf
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="hover:text-emerald-500 transition-colors">About Me</a>
+                    <a href="#education" class="hover:text-emerald-500 transition-colors">Education</a>
+                    <a href="#projects" class="hover:text-emerald-500 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-emerald-500 transition-colors">Contact</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus:outline-none">
+                        <div id="theme-icon">
+                            <!-- Icon injected by JS -->
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-slate-200 dark:border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-500 hover:bg-slate-200 dark:hover:bg-slate-800 w-full text-center">About
+                    Me</a>
+                <a href="#education"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-500 hover:bg-slate-200 dark:hover:bg-slate-800 w-full text-center">Education</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-500 hover:bg-slate-200 dark:hover:bg-slate-800 w-full text-center">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-emerald-500 hover:bg-slate-200 dark:hover:bg-slate-800 w-full text-center">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-4">
+
+            <!-- Available for Hire Badge -->
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-600 dark:text-emerald-400 text-sm font-medium mb-6 animate-fade-in-up">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Available for Hire
+            </div>
+
+            <h2 class="text-xl md:text-2xl font-medium text-emerald-500 mb-4 animate-fade-in-up delay-75">Hello, I'm
+            </h2>
+            <h1
+                class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-teal-500 to-green-500 animate-fade-in-up delay-100">
+                Althaf
+            </h1>
+            <p
+                class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200 leading-relaxed">
+                A passionate Computer Applications student and creative developer. I build accessible, pixel-perfect,
+                and
+                performant web experiences.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
+                <a href="#projects"
+                    class="w-full sm:w-auto px-8 py-3 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all shadow-lg shadow-emerald-500/30 hover:-translate-y-1">
+                    View Projects
+                </a>
+                <a href="#"
+                    class="w-full sm:w-auto px-8 py-3 rounded-full glass border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:-translate-y-1">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-center mb-12 relative inline-block left-1/2 transform -translate-x-1/2">
+                About Me
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-emerald-500 rounded-full"></span>
+            </h2>
+
+            <div class="prose prose-lg dark:prose-invert mx-auto text-justify">
+                <p class="mb-6">
+                    Hi! I'm <strong>Althaf</strong>, a passionate computer science student currently pursuing a Bachelor
+                    of Computer Applications. My interest in web development has led me to dive into front-end
+                    technologies, and I have gained a solid foundation in HTML and CSS. I also have a growing
+                    understanding of JavaScript, and I'm constantly improving my skills to build more dynamic and
+                    interactive websites.
+                </p>
+                <p class="mb-6">
+                    As I continue to learn and explore the world of coding, I aspire to become a full-stack developer,
+                    with expertise in both front-end and back-end technologies. I'm driven by the challenge of solving
+                    problems through code and the satisfaction of creating functional, user-friendly web applications.
+                </p>
+                <p>
+                    Along the way, I'm expanding my knowledge of modern frameworks, databases, and server-side
+                    technologies to complement my current skills. I'm eager to work on real-world projects that will
+                    help me grow and contribute to the tech community.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-center mb-16 relative inline-block left-1/2 transform -translate-x-1/2">
+                Education
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-emerald-500 rounded-full"></span>
+            </h2>
+
+            <div class="relative border-l-4 border-emerald-500 ml-4 md:ml-0 space-y-12">
+
+                <!-- Item 1 -->
+                <div class="mb-8 ml-8 relative">
+                    <span
+                        class="absolute -left-12 top-0 bg-emerald-500 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm ring-4 ring-slate-50 dark:ring-slate-900">1</span>
+                    <div
+                        class="glass p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:transform hover:scale-[1.02] transition-transform duration-300">
+                        <span
+                            class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 rounded-full text-sm font-semibold mb-2">2020-2021</span>
+                        <h3 class="text-2xl font-bold mb-1">SSLC</h3>
+                        <h4 class="text-lg text-slate-500 dark:text-slate-400 mb-4">Aravukad High School</h4>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">
+                            In my 10th grade, I attained a commendable score of 95% in the final examination. This
+                            achievement underscores both my commitment to academic excellence and the high standard of
+                            education offered by the school.
+                        </p>
+                        <div class="text-4xl font-bold text-emerald-500">95%</div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="mb-8 ml-8 relative">
+                    <span
+                        class="absolute -left-12 top-0 bg-emerald-500 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm ring-4 ring-slate-50 dark:ring-slate-900">2</span>
+                    <div
+                        class="glass p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:transform hover:scale-[1.02] transition-transform duration-300">
+                        <span
+                            class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 rounded-full text-sm font-semibold mb-2">2021-2023</span>
+                        <h3 class="text-2xl font-bold mb-1">PLUS TWO</h3>
+                        <h4 class="text-lg text-slate-500 dark:text-slate-400 mb-4">Aravukad Higher Secondary School
+                        </h4>
+                        <p class="text-slate-600 dark:text-slate-300 mb-4">
+                            In my 12th standard, I attained a score of 86.5% in the final exam, reflecting my commitment
+                            to academic excellence.
+                        </p>
+                        <div class="text-4xl font-bold text-emerald-500">86.5%</div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="ml-8 relative">
+                    <span
+                        class="absolute -left-12 top-0 bg-emerald-500 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm ring-4 ring-slate-50 dark:ring-slate-900">3</span>
+                    <div
+                        class="glass p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:transform hover:scale-[1.02] transition-transform duration-300">
+                        <span
+                            class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-300 rounded-full text-sm font-semibold mb-2">2023-2026</span>
+                        <h3 class="text-2xl font-bold mb-1">Bachelor of Computer Application</h3>
+                        <h4 class="text-lg text-slate-500 dark:text-slate-400 mb-4">Cochin Arts and Science College</h4>
+                        <p class="text-slate-600 dark:text-slate-300">
+                            At Cochin Arts and Science College, I'm currently pursuing my Bachelor of Computer
+                            Application.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-center mb-12 relative inline-block left-1/2 transform -translate-x-1/2">
+                Projects
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-emerald-500 rounded-full"></span>
+            </h2>
+
+            <!-- Made grid cards smaller by increasing columns and reducing padding/height -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Placeholder for future projects -->
+                <!-- You can copy this block for new projects -->
+                <div
+                    class="glass rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-shadow duration-300">
+                    <div
+                        class="h-32 bg-gradient-to-br from-slate-300 to-slate-400 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center">
+                        <span class="text-slate-500 dark:text-slate-400 font-medium text-sm">Preview</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1">Project Title 1</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-3 text-xs line-clamp-3">
+                            Brief description of the project goes here. Tech stack used, key features, etc.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#"
+                                class="text-violet-500 hover:text-violet-600 font-medium text-xs flex items-center">
+                                View Code
+                                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="text-fuchsia-500 hover:text-fuchsia-600 font-medium text-xs flex items-center">
+                                Live Demo
+                                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project cards here -->
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-slate-500 italic">More projects coming soon...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-center mb-12 relative inline-block left-1/2 transform -translate-x-1/2">
+                Get In Touch
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-violet-500 rounded-full"></span>
+            </h2>
+
+            <div
+                class="glass rounded-xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700 max-w-2xl mx-auto">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <input type="hidden" name="access_key" value="1e69d902-8f9a-4fce-b937-1768b384e29d">
+
+                    <div>
+                        <label for="name"
+                            class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-shadow">
+                    </div>
+
+                    <div>
+                        <label for="email"
+                            class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-shadow">
+                    </div>
+
+                    <div>
+                        <label for="message"
+                            class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-shadow"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-lg hover:from-emerald-700 hover:to-teal-700 transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-emerald-500/50">
+                        Send Message
+                    </button>
+                    <!-- Removed Powered by Web3Forms -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+
+            <!-- Social Links -->
+            <div class="flex space-x-6 mb-4">
+                <!-- GitHub -->
+                <a href="#"
+                    class="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors transform hover:scale-110">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="#" class="text-slate-500 hover:text-emerald-600 transition-colors transform hover:scale-110">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#" class="text-slate-500 hover:text-pink-600 transition-colors transform hover:scale-110">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="#" class="text-slate-500 hover:text-emerald-700 transition-colors transform hover:scale-110">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+            </div>
+
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                &copy; <span id="year">2023</span> Althaf. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
