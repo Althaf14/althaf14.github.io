@@ -4,6 +4,8 @@ const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
+const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+const mobileThemeIcon = document.getElementById('mobile-theme-icon');
 
 // -- Scroll Handling (Show/Hide Header) --
 let lastScrollY = window.scrollY;
@@ -46,6 +48,9 @@ const setTheme = (theme) => {
     document.documentElement.classList.add(theme);
     localStorage.setItem('theme', theme);
     themeIcon.innerHTML = theme === 'dark' ? iconSun : iconMoon;
+    if (mobileThemeIcon) {
+        mobileThemeIcon.innerHTML = theme === 'dark' ? iconSun : iconMoon;
+    }
 };
 
 // Initial Setup
@@ -62,6 +67,17 @@ themeToggleBtn.addEventListener('click', () => {
         setTheme('dark');
     }
 });
+
+// Mobile Theme Toggle Event Listener
+if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    });
+}
 
 // -- Contact Form Handling --
 const contactForm = document.querySelector('form');
