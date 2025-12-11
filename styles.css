@@ -14,9 +14,7 @@ body {
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-.dark body {
-    /* Background handled via Tailwind classes */
-}
+
 
 /* Glassmorphism */
 .glass {
@@ -27,7 +25,7 @@ body {
 }
 
 .dark .glass {
-    background: rgba(17, 24, 39, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -46,7 +44,8 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: #4b5563;
+    background: #525252;
+    /* Neutral 600 */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -54,7 +53,8 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-    background: #6b7280;
+    background: #737373;
+    /* Neutral 500 */
 }
 
 /* Hide header on scroll down, show on up */

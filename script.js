@@ -94,7 +94,8 @@ contactForm.addEventListener('submit', async (e) => {
         if (response.status === 200) {
             // Success
             submitBtn.innerText = 'Message Sent!';
-            submitBtn.classList.remove('from-blue-600', 'to-indigo-600');
+            // Reset button styles to default state (removing Red only)
+            submitBtn.classList.remove('from-emerald-600', 'to-teal-600', 'dark:from-red-700', 'dark:to-red-600');
             submitBtn.classList.add('bg-green-600'); // Simple solid green indicating success
 
             contactForm.reset();
@@ -104,7 +105,8 @@ contactForm.addEventListener('submit', async (e) => {
                 submitBtn.innerText = 'Send Another Message';
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('bg-green-600');
-                submitBtn.classList.add('from-blue-600', 'to-indigo-600');
+                // Re-add the hybrid gradients
+                submitBtn.classList.add('from-emerald-600', 'to-teal-600', 'dark:from-red-700', 'dark:to-red-600');
             }, 3000);
         } else {
             console.log(response);
